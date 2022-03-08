@@ -1,29 +1,25 @@
 package jpabook.start;
 
-import javax.persistence.*;  //**
+import  javax.persistence.*;
 import java.util.Date;
 
-/**
- * User: HolyEyE
- * Date: 13. 5. 24. Time: 오후 7:43
- */
+
 @Entity
-@Table(name="MEMBER", uniqueConstraints = {@UniqueConstraint( //추가 //**
+@Table(name = "MEMBER", uniqueConstraints = {@UniqueConstraint(
         name = "NAME_AGE_UNIQUE",
-        columnNames = {"NAME", "AGE"} )})
+        columnNames = {"NAME","AGE"}
+)})
 public class Member {
 
     @Id
-    @Column(name = "ID")
+    @Column(name="ID")
     private String id;
 
-    @Column(name = "NAME", nullable = false, length = 10) //추가 //**
-//    @Column(name = "NAME") //추가 //**
+    @Column(name="NAME", nullable = false, length = 10)
     private String username;
 
     private Integer age;
 
-    //=== 추가
     @Enumerated(EnumType.STRING)
     private RoleType roleType;
 
@@ -35,12 +31,6 @@ public class Member {
 
     @Lob
     private String description;
-
-    @Transient
-    private String temp;
-
-
-    //Getter, Setter
 
     public String getId() {
         return id;
@@ -96,13 +86,5 @@ public class Member {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getTemp() {
-        return temp;
-    }
-
-    public void setTemp(String temp) {
-        this.temp = temp;
     }
 }
