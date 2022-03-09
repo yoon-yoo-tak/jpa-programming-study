@@ -18,6 +18,7 @@ public class Main {
 
         EntityTransaction tx = em.getTransaction(); //트랜잭션 기능 획득
 
+
         try {
 
             tx.begin(); //트랜잭션 시작
@@ -32,6 +33,12 @@ public class Main {
         }
 
         emf.close(); //엔티티 매니저 팩토리 종료
+
+
     }
 
+
+
 }
+
+
