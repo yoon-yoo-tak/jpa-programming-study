@@ -3,7 +3,7 @@ package jpabook.model.entity;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+// 10강학습
 
 @Entity
 public class Member {
