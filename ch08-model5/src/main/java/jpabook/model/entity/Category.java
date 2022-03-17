@@ -17,7 +17,7 @@ public class Category {
     private Long id;
 
     private String name;
-
+    private int a;
     @ManyToMany
     @JoinTable(name = "CATEGORY_ITEM",
             joinColumns = @JoinColumn(name = "CATEGORY_ID"),
