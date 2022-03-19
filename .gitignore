@@ -103,3 +103,8 @@ crashlytics-build.properties
 /ch09-model6/target/
 /ch11-jpa-shop/target/
 /ch12-springdata-shop/target/
+/jpashop/target/
+/jpashop/.settings
+/jpashop/pom.xml
+/jpashop/.springBeans.classpath
+target/
